@@ -1647,6 +1647,12 @@ int main(int argc, char** argv)
             sprintf(tmp, "%s.ups", filename);
             patchNames[patchNum] = tmp;
             patchNum++;
+			
+            // no patch given yet - look for ROMBASENAME.bps
+            tmp = (char*)malloc(strlen(filename) + 4 + 1);
+            sprintf(tmp, "%s.bps", filename);
+            patchNames[patchNum] = tmp;
+            patchNum++;
 
             // no patch given yet - look for ROMBASENAME.ppf
             tmp = (char*)malloc(strlen(filename) + 4 + 1);
